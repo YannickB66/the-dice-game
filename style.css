@@ -1,0 +1,28 @@
+body{
+    background-image: url("./ressources/Background.png");
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.table{
+    display: flex;
+    background-color: white;
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top : 5%;
+}
+
+.leftPage{
+    width: 50%;
+    height: 100%;
+    background-color: #F7F7F7;
+}
+
+.rightPage{
+    width: 50%;
+    height: 100%;
+position: relative;
+}
