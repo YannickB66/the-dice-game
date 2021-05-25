@@ -8,7 +8,7 @@ body{
 }
 
 .table{
-   
+    display: flex;
     background-color: white;
     width: 90%;
     height: 90%;
@@ -17,15 +17,16 @@ body{
 }
 
 .leftPage{
-    width: 50%;
-    height: 100%;
     background-color: #F7F7F7;
+    width: 50%;
 }
 
 .rightPage{
     width: 50%;
-    height: 100%;
-position: relative;
+}
+
+.page-top{
+    height: 40%;
 }
 
 h1{
@@ -33,12 +34,77 @@ h1{
     font-weight: 300;
     color: #707070;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .score{
     font-size: 4rem;
     font-weight: 300;
-    color: #a83939;
+    color: #EB4D4C;
     text-align: center;
+}
+
+.page-rest{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+
+}
+
+.current-box{
+    background-color: #EB4D4C;
+    width: 120px;
+}
+
+.current-text{
+    text-align: center;
+    color: #970F0F;
+
+}
+
+.current-score{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+
+.menu{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
+.menu-button > svg{
+    height: 2rem;
+}
+
+.dice-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dice{
+    width: 6rem;
+}
+
+.void{
+    height: 15%;
+}
+
+.menu2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40%;
 }
