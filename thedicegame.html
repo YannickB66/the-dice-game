@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="author" content="Yannick BRUEL">
   <meta name="description"
-    content="The dice game, une jeux de dès à deux joueurs en ligne où le premier des deux joueur arrivé à cent gagne la partie.">
+    content="The dice game, un jeu de dès à deux joueurs en ligne où le premier des deux joueurs arrivé à cent gagne la partie.">
   <link rel="shortcut icon" href="./ressources/de.ico" type="image/x-icon">
   <link rel="stylesheet" href="./meta/bulma.min.css">
   <link rel="stylesheet" href="style.css">
@@ -24,15 +24,15 @@
     <div class="leftPage">
       <div class="page-top">
         <div class="section">
-          <h1>PLAYER 1</h1>
-          <p class="score">42</p>
+          <h1>PLAYER 1 <svg id="dot1" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"><circle cx="8" cy="8" r="8" fill="#eb4d4c"/></svg></h1>
+          <p id="score1" class="score">42</p>
         </div>
       </div>
 
       <div class="page-rest">
         <div class="current-box">
           <p class="current-text">current</p>
-          <p class="current-score">11</p>
+          <p id="current1" class="current-score">11</p>
         </div>
       </div>
     </div>
@@ -41,21 +41,22 @@
     <div class="rightPage">
       <div class="page-top">
         <div class="section">
-          <h1>PLAYER 2</h1>
-          <p class="score">22</p>
+          <h1><svg id="dot2" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"><circle cx="8" cy="8" r="8" fill="#eb4d4c"/></svg> PLAYER 2</h1>
+          <p id="score2" class="score">22</p>
         </div>
       </div>
 
       <div class="page-rest">
         <div class="current-box">
           <p class="current-text">current</p>
-          <p class="current-score">61</p>
+          <p id="current2" class="current-score">61</p>
         </div>
       </div>
     </div>
 
     <div class="menu">
       <div class="menu-button">
+        <div class="menu-button" id="newGame">
         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
           <g transform="translate(-892 -191)">
             <g transform="translate(892 191)" fill="none" stroke="#eb4d4c" stroke-width="2">
@@ -67,6 +68,7 @@
           </g>
         </svg>
         <p>NEW GAME</p>
+        </div>
       </div>
 
       <div class="dice-container">
@@ -78,6 +80,7 @@
       <div class="menu2">
 
         <div class="menu-button">
+          <div class="menu-button" id="rollDice">
           <svg xmlns="http://www.w3.org/2000/svg" width="41.484" height="36.87" viewBox="0 0 41.484 36.87">
             <g transform="translate(-1269.617 -568.628)">
               <g transform="translate(1273.848 569.635)">
@@ -96,8 +99,10 @@
           </svg>
           <p>ROLL DICE</p>
         </div>
+        </div>
 
         <div class="menu-button">
+          <div class="menu-button" id="hold">
           <svg xmlns="http://www.w3.org/2000/svg" width="28.146" height="32.849" viewBox="0 0 28.146 32.849">
             <g transform="translate(-924.626 -656.958)">
               <path d="M1011.641,2105.024h-9.015v24.288h26.146v-24.288H1019.6" transform="translate(-77 -1440.505)"
@@ -111,6 +116,7 @@
             </g>
           </svg>
           <p>&nbspHOLD</p>
+          </div>
         </div>
 
       </div>
@@ -132,7 +138,7 @@
 
 
 
-  <script src="script.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

@@ -108,3 +108,31 @@ h1{
     justify-content: center;
     height: 40%;
 }
+
+#newGame{
+    transition: all .2s ease-in-out;
+}
+
+#newGame:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+#rollDice{
+    transition: all .2s ease-in-out;
+}
+
+#rollDice:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#hold{
+    transition: all .2s ease-in-out;
+}
+
+#hold:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
