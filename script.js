@@ -24,6 +24,7 @@ diceSounds[3] = new Audio('./ressources/dice4.wav');
 oneSound = new Audio('./ressources/false.wav');
 newGameSound = new Audio('./ressources/new-game.wav');
 holdSound = new Audio('./ressources/take.wav');
+winSound = new Audio('./ressources/win.mp3');
 
 
 //les boutons
@@ -109,21 +110,34 @@ rollDice.onclick = () =>{
 }
 
 hold.onclick = () =>{
-
-    holdSound.play();
     if(dot1.style.fillOpacity ==1){
         score1.textContent = parseInt(score1.textContent) + parseInt(current1.textContent);
         if(parseInt(score1.textContent) >= 100){
+            
             alert("Joueur 1 à gagné !!")
+            winSound.play();
+            return;
         }
     }
     else{
         score2.textContent = parseInt(score2.textContent) + parseInt(current2.textContent);
         if(parseInt(score2.textContent) >= 100){
             alert("Joueur 2 à gagné !!")
+            winSound.play();
+            return;
         }
     }
-
+    holdSound.play();
     newTurn();
     
 }
+
+
+//gestion du responsive
+/*
+let p2 = document.getElementById("P2");
+console.log(window.innerWidth);
+if(Window.window.innerWidth < 500)
+{
+    p2.style.display = 'none';
+} */

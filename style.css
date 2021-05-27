@@ -136,3 +136,17 @@ h1{
     transform: scale(1.1);
     cursor: pointer;
 }
+
+.nonSelectionnable
+{
+ -moz-user-select: none;
+ -webkit-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+}
+/*
+@media (max-width: 680px){
+    #P2{
+        display: none;
+    }
+}*/
