@@ -8,6 +8,9 @@ let current2 = document.getElementById('current2');
 let dice = document.getElementById('dice');
 let dot1 = document.getElementById('dot1');
 let dot2 = document.getElementById('dot2');
+let modal = document.getElementById('modal');
+let modalok = document.getElementById('modalok');
+
 
 //les images
 let diceImg = [];
@@ -95,7 +98,7 @@ rollDice.onclick = () =>{
         else{
             current2.textContent = 0;
         }
-        alert("1, C'est perdu :,-(");       //modifier par un pop-up
+        modal.classList.add('is-active') ;   //modifier par un pop-up
         newTurn();
     }
     else{
@@ -112,7 +115,7 @@ rollDice.onclick = () =>{
 hold.onclick = () =>{
     if(dot1.style.fillOpacity ==1){
         score1.textContent = parseInt(score1.textContent) + parseInt(current1.textContent);
-        if(parseInt(score1.textContent) >= 100){
+        if(parseInt(score1.textContent) >= 10){
             
             alert("Joueur 1 à gagné !!")
             winSound.play();
@@ -121,7 +124,7 @@ hold.onclick = () =>{
     }
     else{
         score2.textContent = parseInt(score2.textContent) + parseInt(current2.textContent);
-        if(parseInt(score2.textContent) >= 100){
+        if(parseInt(score2.textContent) >= 10){
             alert("Joueur 2 à gagné !!")
             winSound.play();
             return;
@@ -132,12 +135,6 @@ hold.onclick = () =>{
     
 }
 
-
-//gestion du responsive
-/*
-let p2 = document.getElementById("P2");
-console.log(window.innerWidth);
-if(Window.window.innerWidth < 500)
-{
-    p2.style.display = 'none';
-} */
+modalok.onclick = () =>{
+    modal.classList.remove('is-active');
+}

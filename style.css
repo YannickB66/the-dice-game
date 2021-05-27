@@ -5,6 +5,8 @@ body{
     position: fixed;
     height: 100%;
     width: 100%;
+    min-height: 600px;
+    min-width: 300px;
 }
 
 .table{
@@ -144,9 +146,57 @@ h1{
  -ms-user-select: none;
  user-select: none;
 }
-/*
-@media (max-width: 680px){
-    #P2{
+
+@media screen and (max-width: 680px){
+    .J2{
         display: none;
     }
-}*/
+    .leftPage{
+        width: 100%;
+    }
+    .page-top{
+        position: relative;
+        top : 10px;
+    }
+
+    .dice-container{
+        position: absolute;
+        bottom: 120px;
+        left: 40%;
+    }
+    #newGame{
+        position: absolute;
+        top: -10px;
+    }
+    #rollDice{
+        position: absolute;
+        bottom: 100px;
+        left: 10px;
+    }
+    #hold{
+        position: absolute;
+        bottom: 10px;
+        left: 48%;
+    }
+    .current-box{
+        position: absolute;
+        bottom: 40%;
+        left: 38%;
+    }
+}
+
+@media only screen and (orientation: landscape)  {
+    body{
+        min-height: 0;
+        min-height: 0;
+    }
+}
+
+.modal-card{
+    width: auto;
+}
+
+.modal-card-foot{
+    display: flex;
+    justify-content: center;
+}

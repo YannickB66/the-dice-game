@@ -23,7 +23,7 @@
 
     <div class="leftPage">
       <div class="page-top">
-        <div class="section">
+        <div class="section player">
           <h1>PLAYER 1 <svg id="dot1" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"><circle cx="8" cy="8" r="8" fill="#eb4d4c"/></svg></h1>
           <p id="score1" class="score">42</p>
         </div>
@@ -38,7 +38,7 @@
     </div>
 
 
-    <div class="rightPage">
+    <div class="J2 rightPage">
       <div class="page-top">
         <div class="section">
           <h1><svg id="dot2" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"><circle cx="8" cy="8" r="8" fill="#eb4d4c"/></svg> PLAYER 2</h1>
@@ -53,8 +53,6 @@
         </div>
       </div>
     </div>
-
-
 
     <div class="menu">
       <div class="menu-button">
@@ -120,12 +118,22 @@
           <p class="nonSelectionnable">&nbspHOLD</p>
           </div>
         </div>
-
       </div>
-
-
     </div>
 
+
+    <div id="modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <img class="dice dice-card" src="./ressources/De1.png" alt="affichage du dé">
+          <p class="modal-card-title">Passe ton tour !</p>
+        </header>
+        <footer class="modal-card-foot">
+          <button id="modalok" class="button is-success">Ok</button>
+        </footer>
+      </div>
+    </div>
 
 
   </div>
