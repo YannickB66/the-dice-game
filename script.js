@@ -10,7 +10,12 @@ let dot1 = document.getElementById('dot1');
 let dot2 = document.getElementById('dot2');
 let modal = document.getElementById('modal');
 let modalok = document.getElementById('modalok');
-
+let winmodal = document.getElementById('winmodal');
+let winmodalok = document.getElementById('winmodalok');
+let player1 = document.getElementById('player1');
+let player2 = document.getElementById('player2');
+let P1 = document.getElementById('P1');
+let P2 = document.getElementById('P2');
 
 //les images
 let diceImg = [];
@@ -37,22 +42,42 @@ let hold = document.getElementById('hold');
 
 //variable javascript
 let diceRolls = [4];
+let turn1 = true;
 
-//les fonctiones
+//les fonctions
 
+function changeDisplay(){
+    if(turn1 && window.innerWidth <= 680)
+    {
+         P2.style.display = 'none';
+         P1.style.display = 'block';
+    }
+    else{
+         P1.style.display = 'none';
+         P2.style.display = 'block';
+    }
+    if(window.innerWidth > 680)
+    {
+     P1.style.display = 'block';
+     P2.style.display = 'block';
+    }
+ 
+ }
 
 function newTurn() {
     if(dot1.style.fillOpacity ==1){
+        turn1 = false;
         dot1.style.fillOpacity = 0;
         dot2.style.fillOpacity = 1;
     }
     else{
         dot1.style.fillOpacity = 1;
         dot2.style.fillOpacity = 0;
+        turn1 = true;
     }
     current1.textContent = 0;
     current2.textContent = 0;
-
+    changeDisplay();
 }
 
 function startNewGame() {
@@ -98,7 +123,7 @@ rollDice.onclick = () =>{
         else{
             current2.textContent = 0;
         }
-        modal.classList.add('is-active') ;   //modifier par un pop-up
+        modal.classList.add('is-active');   //modifier par un pop-up
         newTurn();
     }
     else{
@@ -115,17 +140,17 @@ rollDice.onclick = () =>{
 hold.onclick = () =>{
     if(dot1.style.fillOpacity ==1){
         score1.textContent = parseInt(score1.textContent) + parseInt(current1.textContent);
-        if(parseInt(score1.textContent) >= 10){
+        if(parseInt(score1.textContent) >= 100){
             
-            alert("Joueur 1 à gagné !!")
+            win(1);
             winSound.play();
             return;
         }
     }
     else{
         score2.textContent = parseInt(score2.textContent) + parseInt(current2.textContent);
-        if(parseInt(score2.textContent) >= 10){
-            alert("Joueur 2 à gagné !!")
+        if(parseInt(score2.textContent) >= 100){
+            win(2);
             winSound.play();
             return;
         }
@@ -135,6 +160,28 @@ hold.onclick = () =>{
     
 }
 
+
+
+function win(player)
+{
+    winner = document.getElementById('winner');
+    if(player ==1)
+    {
+        winner.textContent = "BRAVO " + player1.textContent + " !";
+    }
+    else
+    {
+        winner.textContent = "BRAVO " + player2.textContent + " !";
+    }
+    winmodal.classList.add('is-active');
+}
+
+
 modalok.onclick = () =>{
     modal.classList.remove('is-active');
+}
+
+winmodalok.onclick = () =>{
+    winmodal.classList.remove('is-active');
+    startNewGame();
 }

@@ -148,10 +148,10 @@ h1{
 }
 
 @media screen and (max-width: 680px){
-    .J2{
-        display: none;
-    }
     .leftPage{
+        width: 100%;
+    }
+    .rightPage{
         width: 100%;
     }
     .page-top{
