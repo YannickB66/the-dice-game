@@ -192,11 +192,11 @@ h1{
     }
 }
 
-.modal-card{
+.modal-card.event{
     width: auto;
 }
 
-.modal-card-foot{
+.modal-card-foot.event{
     display: flex;
     justify-content: center;
 }

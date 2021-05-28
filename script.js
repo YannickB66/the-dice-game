@@ -1,6 +1,5 @@
 
 //Variable html
-//texte
 let score1 = document.getElementById('score1');
 let score2 = document.getElementById('score2');
 let current1 = document.getElementById('current1');
@@ -16,6 +15,11 @@ let player1 = document.getElementById('player1');
 let player2 = document.getElementById('player2');
 let P1 = document.getElementById('P1');
 let P2 = document.getElementById('P2');
+let I1 = document.getElementById("P1slot");
+let I2 = document.getElementById("P2slot");
+let startMenuOk = document.getElementById("start-menu-ok");
+let startMenu = document.getElementById("start-menu");
+let quit = document.getElementsByClassName("quit");
 
 //les images
 let diceImg = [];
@@ -43,6 +47,7 @@ let hold = document.getElementById('hold');
 //variable javascript
 let diceRolls = [4];
 let turn1 = true;
+
 
 //les fonctions
 
@@ -81,6 +86,8 @@ function newTurn() {
 }
 
 function startNewGame() {
+    player1.innerText = I1.value;
+    player2.innerText = I2.value;
     newGameSound.play();
     score1.textContent = 0;
     score2.textContent = 0;
@@ -100,10 +107,21 @@ startNewGame()
 
 //les boutons : intéractions
 newGame.onclick = () => {
-    if(confirm("Voulez-vous demarrer une nouvelle partie ?"))
-    {
-        startNewGame()
+    startMenu.classList.add("is-active");
+}
+
+startMenuOk.onclick = () => {
+    player1.innerText = I1.value;
+    player2.innerText = I2.value;
+    startMenu.classList.remove("is-active");
+    startNewGame();
+}
+
+for (let i = 0; i < quit.length; i++) {
+    quit[i].onclick = () =>{
+        startMenu.classList.remove('is-active');
     }
+    
 }
 
 rollDice.onclick = () =>{

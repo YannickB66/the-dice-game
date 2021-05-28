@@ -16,7 +16,34 @@
 
 <body onresize="changeDisplay()">
 
-
+  <div id="start-menu" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">The Dice Game</p>
+        <button class="delete quit" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>Les règles sont très simples : le premier arrivé à 100 a gagné.</p>
+        <p>Vous pouvez lancer le dé autant de fois que vous le voulez.</p>
+        <p>Mais si vous faites 1 vous passez votre tour.</p>
+        <p>&nbsp</p>
+        <b>CHOIX DES JOUEURS : </b>
+        <p>&nbsp</p>
+        <div class="control">
+          <input id="P1slot" class="input" type="text" value="PLAYER 1">
+        </div>
+        <p>&nbsp</p>
+        <div class="control">
+          <input id="P2slot" class="input" type="text" value="PLAYER 2">
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button id="start-menu-ok" class="button is-success">Nouvelle partie</button>
+        <button class="button quit">Annuler</button>
+      </footer>
+    </div>
+  </div>
 
   <div class='table container'>
 
@@ -121,28 +148,28 @@
     </div>
 
 
-    <div id="modal" class="modal">
+    <div id="modal" class="modal nonSelectionnable">
       <div class="modal-background"></div>
-      <div class="modal-card">
+      <div class="modal-card event">
         <header class="modal-card-head">
           <img class="dice dice-card" src="./ressources/De1.png" alt="affichage du dé">
           <p class="modal-card-title">Passe ton tour !</p>
         </header>
-        <footer class="modal-card-foot">
+        <footer class="modal-card-foot event">
           <button id="modalok" class="button is-success">Ok</button>
         </footer>
       </div>
     </div>
 
 
-    <div id="winmodal" class="modal">
+    <div id="winmodal" class="modal nonSelectionnable">
       <div class="modal-background"></div>
-      <div class="modal-card">
+      <div class="modal-card event">
         <header class="modal-card-head">
           <img class="dice dice-card" src="./ressources/goldendice.png" alt="affichage du dé">
           <p id="winner" class="modal-card-title">Bravo !</p>
         </header>
-        <footer class="modal-card-foot">
+        <footer class="modal-card-foot event">
           <button id="winmodalok" class="button is-success">Merci</button>
         </footer>
       </div>
