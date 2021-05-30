@@ -188,7 +188,7 @@ h1{
 @media only screen and (orientation: landscape)  {
     body{
         min-height: 0px;
-        min-height: 360px;
+        min-height: 365px;
     }
     #rollDice{
         margin-bottom: 50px;
