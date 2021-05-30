@@ -170,13 +170,13 @@ h1{
     }
     #rollDice{
         position: absolute;
-        bottom: 100px;
-        left: 10px;
+        bottom: 10px;
+        left: 10%;
     }
     #hold{
         position: absolute;
         bottom: 10px;
-        left: 48%;
+        left: 60%;
     }
     .current-box{
         position: absolute;
@@ -187,8 +187,8 @@ h1{
 
 @media only screen and (orientation: landscape)  {
     body{
-        min-height: 0;
-        min-height: 0;
+        /*min-height: 0;
+        min-height: 0;*/
     }
 }
 
